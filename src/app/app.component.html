@@ -1,28 +1,33 @@
 <div class="ui-g">
   <div class="ui-g-12 ui-lg-12 ui-md-12">
    
-<p-table [value]="cars"  columnResizeMode="expand"
-[resizableColumns]="true" >
+<p-table [value]="cars"
+[resizableColumns]="true" [scrollable] = "true" [paginator]="true" [rows]="2" >
+  <ng-template pTemplate="caption">
+    <div style="display: flex; width: 100%">
+      <input type="text" pInputText />
+    </div>
+  </ng-template>
     <ng-template pTemplate="header">
         <tr>
-            <th pResizableColumn>Vin</th>
-            <th style = "width: 100px">Year</th>
-            <th style = "width: 100px"> Brand</th>
-            <th style = "width: 100px">Color</th>
+            <th style="width: 10em">Vineerererrrrrrrrrrrr</th>
+            <th style="min-width: 5em">Yearreree</th>
+            <th style="width: 10em"> Brand</th>
+            <th style="width: 10em">Color</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-car>
         <tr>
-            <td>{{'hellosdsdsdsdsdsdsdsdsdssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss'}}</td>
-            <td>{{'hello'}}</td>
-            <td>{{'hello'}}</td>
-            <td>{{'hello'}}</td>
+            <td style="width: 10em" class="ui-resizable-column">{{'hellosdsdsdsdsdsdsdsdsdssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss'}}</td>
+            <td  style="min-width: 5em" class="ui-resizable-column">{{'hello'}}</td>
+            <td style="width: 10em" class="ui-resizable-column">{{'hello'}}</td>
+            <td style="width: 10em" class="ui-resizable-column">{{'hello'}}</td>
         </tr>
         <tr>
-            <td>{{'hello'}}</td>
-            <td>{{'hello'}}</td>
-            <td>{{'hello'}}</td>
-            <td>{{'hello'}}</td>
+            <td style="width: 10em" class="ui-resizable-column">{{'hello'}}</td>
+            <td style="min-width: 5em" class="ui-resizable-column">{{'hello'}}</td>
+            <td style="width: 10em" class="ui-resizable-column">{{'hello'}}</td>
+            <td style="width: 10em" class="ui-resizable-column">{{'hello'}}</td>
         </tr>
     </ng-template>
 </p-table>
